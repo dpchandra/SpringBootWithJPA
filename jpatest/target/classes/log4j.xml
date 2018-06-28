@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+
+    <!-- APPENDER: console -->
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
+        </Console>
+  
+
+        <!-- APPENDER: rollingFileSize -->
+    
+        <File name="spAppRollingFileAppender" fileName="spLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+    
+        <!-- APPENDER: rollingFileSize -->
+    
+        <File name="spAppRollingFileAppender" fileName="spForecastLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+    
+        <!-- APPENDER: rollingFileSize -->
+    
+        <File name="spAppRollingFileAppender" fileName="spInventoryLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+    
+        <!-- APPENDER: rollingFileSize -->
+    
+        <File name="spAppRollingFileAppender" fileName="spSNPLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+    
+        <!-- APPENDER: rollingFileSize -->
+    
+        <File name="spAppRollingFileAppender" fileName="spProcurementLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+    
+        <!-- APPENDER: rollingFileSize -->
+    
+        <File name="spAppRollingFileAppender" fileName="spProductionPlanLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+    
+        <!-- APPENDER: rollingFileSize -->
+    
+        <File name="spAppRollingFileAppender" fileName="spProductionScheduleLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+    
+        <!-- APPENDER: rollingFileSize -->
+    
+        <File name="spAppRollingFileAppender" fileName="spProductionScheduleLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+    
+        <!-- APPENDER: rollingFileSize -->
+        
+        <File name="spAppRollingFileAppender" fileName="spTransportationLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+
+    
+        <!-- APPENDER: rollingFileSize -->
+        
+        <File name="spAppRollingFileAppender" fileName="spVehicleRootLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+    
+        <!-- APPENDER: rollingFileSize -->
+        
+        <File name="spAppRollingFileAppender" fileName="spWorkforceLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+    
+    
+        <!-- APPENDER: rollingFileSize -->
+    
+        <File name="spAppRollingFileAppender" fileName="spPersistenceLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+    
+        <!-- APPENDER: rollingFileSize -->
+    
+        <File name="spAppRollingFileAppender" fileName="spSolverLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+    
+
+        <!-- APPENDER: rollingFileSize -->
+    
+        <File name="spAppRollingFileAppender" fileName="spDataLoadLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+
+
+        <!-- APPENDER: dailyRollingFile -->
+        
+        <File name="spAppRollingFileAppender" fileName="spDailyLog.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+
+    </Appenders>
+    <Loggers>
+        
+        <Logger name="org" level="info"></Logger>
+        <Logger name="javax" level="info"></Logger>
+   
+        ///Forecast Module Log
+        <Logger name="com.saddlepoint.forecaster"  level="debug">
+            
+            <AppenderRef ref="spForecastFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.zk.demandplanner"  level="debug">
+            
+            <AppenderRef ref="spForecastFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.services.demandplanner"  level="debug">
+            
+            <AppenderRef ref="spForecastFileAppender" />
+        </Logger>
+        ///Inventory Module Log
+        <Logger name="com.saddlepoint.inventoryoptimizer"  level="debug">
+            
+            <AppenderRef ref="spInventoryFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.zk.inventoryoptimizer"  level="debug">
+            
+            <AppenderRef ref="spInventoryFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.services.inventoryoptimizer"  level="debug">
+            
+            <AppenderRef ref="spInventoryFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.meio"  level="debug">
+            
+            <AppenderRef ref="spInventoryFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.zk.meio"  level="debug">
+            
+            <AppenderRef ref="spInventoryFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.services.meio"  level="debug">
+            
+            <AppenderRef ref="spInventoryFileAppender" />
+        </Logger>
+        ///SNP Module Log
+        <Logger name="com.saddlepoint.npoptimizer"  level="debug">
+            
+            <AppenderRef ref="spSNPFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.services.networkplanner"  level="debug">
+            
+            <AppenderRef ref="spSNPFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.zk.networkplanner"  level="debug">
+            
+            <AppenderRef ref="spSNPFileAppender" />
+        </Logger>
+        ///Procurement Module Log
+        <Logger name="com.saddlepoint.pcoptimizer"  level="debug">
+            
+            <AppenderRef ref="spProcurementFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.zk.procurementoptimizer"  level="debug">
+            
+            <AppenderRef ref="spProcurementFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.services.procurementoptimizer"  level="debug">
+            
+            <AppenderRef ref="spProcurementFileAppender" />
+        </Logger>
+        ///Production Planner Module Log
+        <Logger name="com.saddlepoint.productionplanner"  level="debug">
+            
+            <AppenderRef ref="spProductionPlanFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.services.productionplanner"  level="debug">
+            
+            <AppenderRef ref="spProductionPlanFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.zk.productionplanner"  level="debug">
+            
+            <AppenderRef ref="spProductionPlanFileAppender" />
+        </Logger>
+        ///Production Scheduler Module Log
+        <Logger name="com.saddlepoint.productionscheduler"  level="debug">
+            
+            <AppenderRef ref="spProductionScheduleFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.zk.productionscheduler"  level="debug">
+            
+            <AppenderRef ref="spProductionScheduleFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.services.productionscheduler"  level="debug">
+            
+            <AppenderRef ref="spProductionScheduleFileAppender" />
+        </Logger>
+        ///Shift Scheduler Module Log
+        <Logger name="com.saddlepoint.shiftscheduler"  level="debug">
+            
+            <AppenderRef ref="spShiftScheduleFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.zk.shiftscheduler"  level="debug">
+            
+            <AppenderRef ref="spShiftScheduleFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.services.shiftscheduler"  level="debug">
+            
+            <AppenderRef ref="spShiftScheduleFileAppender" />
+        </Logger>
+        ///Transportation Module Log
+        <Logger name="com.saddlepoint.transportationoptimizer"  level="debug">
+            
+            <AppenderRef ref="spTransportationFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.services.transportationoptimizer"  level="debug">
+            
+            <AppenderRef ref="spTransportationFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.zk.transportationoptimizer"  level="debug">
+            
+            <AppenderRef ref="spTransportationFileAppender" />
+        </Logger>
+        ///VRS Module Log
+        <Logger name="com.saddlepoint.vehiclescheduler"  level="debug">
+            
+            <AppenderRef ref="spVehicleRootFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.zk.vehiclerouteplanner"  level="debug">
+            
+            <AppenderRef ref="spVehicleRootFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.services.vehiclerouteplanner"  level="debug">
+            
+            <AppenderRef ref="spVehicleRootFileAppender" />
+        </Logger>
+        ///Workforce Module Log
+        <Logger name="com.saddlepoint.workforceoptimizer"  level="debug">
+            
+            <AppenderRef ref="spWorkforceFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.services.workforceoptimizer"  level="debug">
+            
+            <AppenderRef ref="spWorkforceFileAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.zk.workforceoptimizer"  level="debug">
+            
+            <AppenderRef ref="spWorkforceFileAppender" />
+        </Logger>
+        ///Solver Log
+        <Logger name="com.saddlepoint.solver"  level="debug">
+            
+            <AppenderRef ref="spSolverAppender" />
+        </Logger>
+   
+        ///Persistence Log
+        <Logger name="com.saddlepoint.persistence">
+            
+            <AppenderRef ref="spPersistenceAppender" />
+        </Logger>
+        ///Dataload Log
+        <Logger name="com.saddlepoint.dataload">
+            
+            <AppenderRef ref="spDataLoadAppender" />
+        </Logger>
+        <Logger name="com.saddlepoint.services.integration">
+            
+            <AppenderRef ref="spDataLoadAppender" />
+        </Logger>
+    
+
+
+        <Root>
+            <AppenderRef ref="spAppRollingFileAppender" />
+        </Root>
+    </Loggers>
+</Configuration>
